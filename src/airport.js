@@ -18,6 +18,9 @@ Airport.prototype.land = function(plane) {
 		return 'plane has already landed'
 };
 
-Airport.prototype.takeOff = function(number) {
-	this.planes.pop(plane)
+Airport.prototype.takeOff = function(plane) {
+	if (this.planes.indexOf(plane) !== -1)
+		this.planes.pop(plane)
+	else
+		return 'Plane has already taken off'
 };

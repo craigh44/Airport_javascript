@@ -21,4 +21,10 @@ describe ('Airport', function() {
 		expect(airport.land(plane)).toEqual('plane has already landed')
 	});
 
+	it('should only let a plane take off if it is in the airport', function(){
+		airport.takeOff(plane)
+		expect(airport.takeOff(plane)).toEqual('Plane has already taken off')
+
+	});
+
 });
