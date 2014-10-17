@@ -20,7 +20,7 @@ Airport.prototype.land = function(plane) {
 
 Airport.prototype.takeOff = function(plane) {
 	if (this.planes.indexOf(plane) !== -1)
-		this.planes.pop(plane)
+		this.planes.splice(this.planes.indexOf(plane),1)[0]
 	else
 		return 'Plane has already taken off'
 };

@@ -27,4 +27,11 @@ describe ('Airport', function() {
 
 	});
 
+	it('should know how many planes have landed', function(){
+		airport.land(plane)
+		jet = new Plane
+		airport.land(jet)
+		expect(airport.planes.length).toEqual(2)
+	});
+
 });
